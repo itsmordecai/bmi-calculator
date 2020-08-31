@@ -5,6 +5,7 @@ import 'reusable_card.dart';
 import 'constants.dart';
 import 'round_icon_button.dart';
 import 'results_page.dart';
+import 'bottom_button.dart';
 
 enum Gender {
   male,
@@ -215,7 +216,8 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
+          BottomButton(
+            buttonTitle: 'CALCULATE',
             onTap: () {
               Navigator.push(
                 context,
@@ -224,13 +226,6 @@ class _InputPageState extends State<InputPage> {
                 ),
               );
             },
-            child: Container(
-              child: Text('CALCULATE'),
-              color: kBottomContainerColour,
-              margin: EdgeInsets.only(top: 10.0),
-              width: double.infinity,
-              height: kBottomContainerHeight,
-            ),
           ),
         ],
       ),
